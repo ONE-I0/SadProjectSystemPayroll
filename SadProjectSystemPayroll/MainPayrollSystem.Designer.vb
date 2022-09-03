@@ -27,7 +27,8 @@ Partial Class MainPayrollSystem
         Me.PayrollToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.AttendanceToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.EmployeeToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.RegisterToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.UpdateEmployeeToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.RegisterEmployeeToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.SettingToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.LogoutToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
@@ -49,8 +50,6 @@ Partial Class MainPayrollSystem
         Me.GroupBox3 = New System.Windows.Forms.GroupBox()
         Me.btnCancel = New System.Windows.Forms.Button()
         Me.btnCompute = New System.Windows.Forms.Button()
-        Me.txtPayment = New System.Windows.Forms.TextBox()
-        Me.txtWeeklyHours = New System.Windows.Forms.TextBox()
         Me.Label3 = New System.Windows.Forms.Label()
         Me.Label8 = New System.Windows.Forms.Label()
         Me.BackgroundWorker1 = New System.ComponentModel.BackgroundWorker()
@@ -80,6 +79,16 @@ Partial Class MainPayrollSystem
         Me.Label19 = New System.Windows.Forms.Label()
         Me.ToolTip1 = New System.Windows.Forms.ToolTip(Me.components)
         Me.refresh = New System.Windows.Forms.Button()
+        Me.TextBox1 = New System.Windows.Forms.TextBox()
+        Me.Label7 = New System.Windows.Forms.Label()
+        Me.Label21 = New System.Windows.Forms.Label()
+        Me.Label22 = New System.Windows.Forms.Label()
+        Me.TextBox2 = New System.Windows.Forms.TextBox()
+        Me.Label23 = New System.Windows.Forms.Label()
+        Me.TextBox3 = New System.Windows.Forms.TextBox()
+        Me.TextBox4 = New System.Windows.Forms.TextBox()
+        Me.txtWeeklyHours = New System.Windows.Forms.TextBox()
+        Me.txtPayment = New System.Windows.Forms.TextBox()
         Me.MenuStrip1.SuspendLayout()
         Me.GroupBox1.SuspendLayout()
         Me.GroupBox3.SuspendLayout()
@@ -90,10 +99,10 @@ Partial Class MainPayrollSystem
         '
         'MenuStrip1
         '
-        Me.MenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.PayrollToolStripMenuItem, Me.AttendanceToolStripMenuItem, Me.EmployeeToolStripMenuItem, Me.RegisterToolStripMenuItem, Me.SettingToolStripMenuItem, Me.LogoutToolStripMenuItem})
+        Me.MenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.PayrollToolStripMenuItem, Me.AttendanceToolStripMenuItem, Me.EmployeeToolStripMenuItem, Me.SettingToolStripMenuItem, Me.LogoutToolStripMenuItem})
         Me.MenuStrip1.Location = New System.Drawing.Point(0, 0)
         Me.MenuStrip1.Name = "MenuStrip1"
-        Me.MenuStrip1.Size = New System.Drawing.Size(870, 24)
+        Me.MenuStrip1.Size = New System.Drawing.Size(880, 24)
         Me.MenuStrip1.TabIndex = 0
         Me.MenuStrip1.Text = "MenuStrip1"
         '
@@ -111,15 +120,22 @@ Partial Class MainPayrollSystem
         '
         'EmployeeToolStripMenuItem
         '
+        Me.EmployeeToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.UpdateEmployeeToolStripMenuItem, Me.RegisterEmployeeToolStripMenuItem})
         Me.EmployeeToolStripMenuItem.Name = "EmployeeToolStripMenuItem"
         Me.EmployeeToolStripMenuItem.Size = New System.Drawing.Size(71, 20)
         Me.EmployeeToolStripMenuItem.Text = "Employee"
         '
-        'RegisterToolStripMenuItem
+        'UpdateEmployeeToolStripMenuItem
         '
-        Me.RegisterToolStripMenuItem.Name = "RegisterToolStripMenuItem"
-        Me.RegisterToolStripMenuItem.Size = New System.Drawing.Size(61, 20)
-        Me.RegisterToolStripMenuItem.Text = "Register"
+        Me.UpdateEmployeeToolStripMenuItem.Name = "UpdateEmployeeToolStripMenuItem"
+        Me.UpdateEmployeeToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
+        Me.UpdateEmployeeToolStripMenuItem.Text = "Update Employee"
+        '
+        'RegisterEmployeeToolStripMenuItem
+        '
+        Me.RegisterEmployeeToolStripMenuItem.Name = "RegisterEmployeeToolStripMenuItem"
+        Me.RegisterEmployeeToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
+        Me.RegisterEmployeeToolStripMenuItem.Text = "Register Employee"
         '
         'SettingToolStripMenuItem
         '
@@ -150,7 +166,7 @@ Partial Class MainPayrollSystem
         Me.GroupBox1.Controls.Add(Me.Label1)
         Me.GroupBox1.Location = New System.Drawing.Point(12, 68)
         Me.GroupBox1.Name = "GroupBox1"
-        Me.GroupBox1.Size = New System.Drawing.Size(381, 281)
+        Me.GroupBox1.Size = New System.Drawing.Size(381, 337)
         Me.GroupBox1.TabIndex = 2
         Me.GroupBox1.TabStop = False
         Me.GroupBox1.Text = "Employee Information"
@@ -294,21 +310,29 @@ Partial Class MainPayrollSystem
         '
         'GroupBox3
         '
-        Me.GroupBox3.Controls.Add(Me.btnCancel)
-        Me.GroupBox3.Controls.Add(Me.btnCompute)
         Me.GroupBox3.Controls.Add(Me.txtPayment)
         Me.GroupBox3.Controls.Add(Me.txtWeeklyHours)
+        Me.GroupBox3.Controls.Add(Me.TextBox4)
+        Me.GroupBox3.Controls.Add(Me.TextBox3)
+        Me.GroupBox3.Controls.Add(Me.TextBox2)
+        Me.GroupBox3.Controls.Add(Me.Label23)
+        Me.GroupBox3.Controls.Add(Me.Label22)
+        Me.GroupBox3.Controls.Add(Me.Label21)
+        Me.GroupBox3.Controls.Add(Me.TextBox1)
+        Me.GroupBox3.Controls.Add(Me.Label7)
+        Me.GroupBox3.Controls.Add(Me.btnCancel)
+        Me.GroupBox3.Controls.Add(Me.btnCompute)
         Me.GroupBox3.Controls.Add(Me.Label3)
         Me.GroupBox3.Controls.Add(Me.Label8)
         Me.GroupBox3.Location = New System.Drawing.Point(399, 214)
         Me.GroupBox3.Name = "GroupBox3"
-        Me.GroupBox3.Size = New System.Drawing.Size(229, 135)
+        Me.GroupBox3.Size = New System.Drawing.Size(229, 244)
         Me.GroupBox3.TabIndex = 4
         Me.GroupBox3.TabStop = False
         '
         'btnCancel
         '
-        Me.btnCancel.Location = New System.Drawing.Point(161, 63)
+        Me.btnCancel.Location = New System.Drawing.Point(156, 215)
         Me.btnCancel.Name = "btnCancel"
         Me.btnCancel.Size = New System.Drawing.Size(57, 23)
         Me.btnCancel.TabIndex = 17
@@ -317,47 +341,30 @@ Partial Class MainPayrollSystem
         '
         'btnCompute
         '
-        Me.btnCompute.Location = New System.Drawing.Point(98, 63)
+        Me.btnCompute.Location = New System.Drawing.Point(98, 215)
         Me.btnCompute.Name = "btnCompute"
         Me.btnCompute.Size = New System.Drawing.Size(57, 23)
         Me.btnCompute.TabIndex = 16
         Me.btnCompute.Text = "Compute"
         Me.btnCompute.UseVisualStyleBackColor = True
         '
-        'txtPayment
-        '
-        Me.txtPayment.Enabled = False
-        Me.txtPayment.Location = New System.Drawing.Point(98, 94)
-        Me.txtPayment.Multiline = True
-        Me.txtPayment.Name = "txtPayment"
-        Me.txtPayment.Size = New System.Drawing.Size(115, 35)
-        Me.txtPayment.TabIndex = 14
-        '
-        'txtWeeklyHours
-        '
-        Me.txtWeeklyHours.Location = New System.Drawing.Point(98, 13)
-        Me.txtWeeklyHours.Multiline = True
-        Me.txtWeeklyHours.Name = "txtWeeklyHours"
-        Me.txtWeeklyHours.Size = New System.Drawing.Size(115, 35)
-        Me.txtWeeklyHours.TabIndex = 14
-        '
         'Label3
         '
         Me.Label3.AutoSize = True
-        Me.Label3.Location = New System.Drawing.Point(19, 97)
+        Me.Label3.Location = New System.Drawing.Point(6, 52)
         Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(48, 13)
+        Me.Label3.Size = New System.Drawing.Size(63, 13)
         Me.Label3.TabIndex = 12
-        Me.Label3.Text = "Payment"
+        Me.Label3.Text = "GrossSalary"
         '
         'Label8
         '
         Me.Label8.AutoSize = True
-        Me.Label8.Location = New System.Drawing.Point(19, 28)
+        Me.Label8.Location = New System.Drawing.Point(6, 22)
         Me.Label8.Name = "Label8"
-        Me.Label8.Size = New System.Drawing.Size(74, 13)
+        Me.Label8.Size = New System.Drawing.Size(66, 13)
         Me.Label8.TabIndex = 12
-        Me.Label8.Text = "Weekly Hours"
+        Me.Label8.Text = "WeeklyHour"
         '
         'GroupBox2
         '
@@ -381,7 +388,7 @@ Partial Class MainPayrollSystem
         Me.GroupBox2.Controls.Add(Me.Label10)
         Me.GroupBox2.Location = New System.Drawing.Point(634, 68)
         Me.GroupBox2.Name = "GroupBox2"
-        Me.GroupBox2.Size = New System.Drawing.Size(224, 281)
+        Me.GroupBox2.Size = New System.Drawing.Size(224, 390)
         Me.GroupBox2.TabIndex = 5
         Me.GroupBox2.TabStop = False
         Me.GroupBox2.Text = "Pay Slip"
@@ -582,7 +589,7 @@ Partial Class MainPayrollSystem
         'DataGridView1
         '
         Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.DataGridView1.Location = New System.Drawing.Point(17, 368)
+        Me.DataGridView1.Location = New System.Drawing.Point(12, 464)
         Me.DataGridView1.Name = "DataGridView1"
         Me.DataGridView1.Size = New System.Drawing.Size(806, 191)
         Me.DataGridView1.TabIndex = 19
@@ -601,17 +608,107 @@ Partial Class MainPayrollSystem
         '
         Me.refresh.BackgroundImage = Global.SadProjectSystemPayroll.My.Resources.Resources.refress_icon
         Me.refresh.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.refresh.Location = New System.Drawing.Point(825, 367)
+        Me.refresh.Location = New System.Drawing.Point(826, 464)
         Me.refresh.Name = "refresh"
         Me.refresh.Size = New System.Drawing.Size(42, 38)
         Me.refresh.TabIndex = 22
         Me.refresh.UseVisualStyleBackColor = True
         '
+        'TextBox1
+        '
+        Me.TextBox1.Enabled = False
+        Me.TextBox1.Location = New System.Drawing.Point(98, 85)
+        Me.TextBox1.Multiline = True
+        Me.TextBox1.Name = "TextBox1"
+        Me.TextBox1.Size = New System.Drawing.Size(115, 24)
+        Me.TextBox1.TabIndex = 19
+        '
+        'Label7
+        '
+        Me.Label7.AutoSize = True
+        Me.Label7.Location = New System.Drawing.Point(6, 83)
+        Me.Label7.Name = "Label7"
+        Me.Label7.Size = New System.Drawing.Size(79, 13)
+        Me.Label7.TabIndex = 18
+        Me.Label7.Text = "Tax:    Pag-Ibig"
+        '
+        'Label21
+        '
+        Me.Label21.AutoSize = True
+        Me.Label21.Location = New System.Drawing.Point(6, 118)
+        Me.Label21.Name = "Label21"
+        Me.Label21.Size = New System.Drawing.Size(61, 13)
+        Me.Label21.TabIndex = 20
+        Me.Label21.Text = "           SSS"
+        '
+        'Label22
+        '
+        Me.Label22.AutoSize = True
+        Me.Label22.Location = New System.Drawing.Point(6, 151)
+        Me.Label22.Name = "Label22"
+        Me.Label22.Size = New System.Drawing.Size(88, 13)
+        Me.Label22.TabIndex = 21
+        Me.Label22.Text = "           PhilHealth"
+        '
+        'TextBox2
+        '
+        Me.TextBox2.Enabled = False
+        Me.TextBox2.Location = New System.Drawing.Point(98, 184)
+        Me.TextBox2.Multiline = True
+        Me.TextBox2.Name = "TextBox2"
+        Me.TextBox2.Size = New System.Drawing.Size(115, 24)
+        Me.TextBox2.TabIndex = 23
+        '
+        'Label23
+        '
+        Me.Label23.AutoSize = True
+        Me.Label23.Location = New System.Drawing.Point(6, 178)
+        Me.Label23.Name = "Label23"
+        Me.Label23.Size = New System.Drawing.Size(62, 13)
+        Me.Label23.TabIndex = 22
+        Me.Label23.Text = "Net-Income"
+        '
+        'TextBox3
+        '
+        Me.TextBox3.Enabled = False
+        Me.TextBox3.Location = New System.Drawing.Point(98, 118)
+        Me.TextBox3.Multiline = True
+        Me.TextBox3.Name = "TextBox3"
+        Me.TextBox3.Size = New System.Drawing.Size(115, 24)
+        Me.TextBox3.TabIndex = 24
+        '
+        'TextBox4
+        '
+        Me.TextBox4.Enabled = False
+        Me.TextBox4.Location = New System.Drawing.Point(98, 151)
+        Me.TextBox4.Multiline = True
+        Me.TextBox4.Name = "TextBox4"
+        Me.TextBox4.Size = New System.Drawing.Size(115, 24)
+        Me.TextBox4.TabIndex = 25
+        '
+        'txtWeeklyHours
+        '
+        Me.txtWeeklyHours.Enabled = False
+        Me.txtWeeklyHours.Location = New System.Drawing.Point(98, 19)
+        Me.txtWeeklyHours.Multiline = True
+        Me.txtWeeklyHours.Name = "txtWeeklyHours"
+        Me.txtWeeklyHours.Size = New System.Drawing.Size(115, 24)
+        Me.txtWeeklyHours.TabIndex = 26
+        '
+        'txtPayment
+        '
+        Me.txtPayment.Enabled = False
+        Me.txtPayment.Location = New System.Drawing.Point(98, 52)
+        Me.txtPayment.Multiline = True
+        Me.txtPayment.Name = "txtPayment"
+        Me.txtPayment.Size = New System.Drawing.Size(115, 24)
+        Me.txtPayment.TabIndex = 26
+        '
         'MainPayrollSystem
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(870, 568)
+        Me.ClientSize = New System.Drawing.Size(880, 667)
         Me.Controls.Add(Me.refresh)
         Me.Controls.Add(Me.Label19)
         Me.Controls.Add(Me.DataGridView1)
@@ -644,7 +741,6 @@ Partial Class MainPayrollSystem
     Friend WithEvents PayrollToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents AttendanceToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents EmployeeToolStripMenuItem As ToolStripMenuItem
-    Friend WithEvents RegisterToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents SettingToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents LogoutToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents GroupBox1 As GroupBox
@@ -661,7 +757,6 @@ Partial Class MainPayrollSystem
     Friend WithEvents txtID As TextBox
     Friend WithEvents Label1 As Label
     Friend WithEvents GroupBox3 As GroupBox
-    Friend WithEvents txtPayment As TextBox
     Friend WithEvents Label3 As Label
     Friend WithEvents BackgroundWorker1 As System.ComponentModel.BackgroundWorker
     Friend WithEvents GroupBox2 As GroupBox
@@ -675,7 +770,6 @@ Partial Class MainPayrollSystem
     Friend WithEvents Label11 As Label
     Friend WithEvents Label10 As Label
     Friend WithEvents GroupBox4 As GroupBox
-    Friend WithEvents txtWeeklyHours As TextBox
     Friend WithEvents btnCompute As Button
     Friend WithEvents Label8 As Label
     Friend WithEvents txtRate As TextBox
@@ -697,4 +791,16 @@ Partial Class MainPayrollSystem
     Friend WithEvents lblGender As Label
     Friend WithEvents lblAddress As Label
     Friend WithEvents refresh As Button
+    Friend WithEvents UpdateEmployeeToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents RegisterEmployeeToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents txtPayment As TextBox
+    Friend WithEvents txtWeeklyHours As TextBox
+    Friend WithEvents TextBox4 As TextBox
+    Friend WithEvents TextBox3 As TextBox
+    Friend WithEvents TextBox2 As TextBox
+    Friend WithEvents Label23 As Label
+    Friend WithEvents Label22 As Label
+    Friend WithEvents Label21 As Label
+    Friend WithEvents TextBox1 As TextBox
+    Friend WithEvents Label7 As Label
 End Class

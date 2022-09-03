@@ -20,7 +20,7 @@ Public Class MainPayrollSystem
             MsgBox(ex.Message)
         End Try
     End Sub
-    Private Sub RegisterToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles RegisterToolStripMenuItem.Click
+    Private Sub RegisterToolStripMenuItem_Click(sender As Object, e As EventArgs)
 
         Dim empRegistration As Employee_Registration = New Employee_Registration
         empRegistration.Show()
@@ -96,7 +96,7 @@ Public Class MainPayrollSystem
         End Try
     End Sub
 
-    Private Sub txtWeeklyHours_KeyPress(sender As Object, e As KeyPressEventArgs) Handles txtWeeklyHours.KeyPress
+    Private Sub txtWeeklyHours_KeyPress(sender As Object, e As KeyPressEventArgs)
         If Char.IsNumber(e.KeyChar) = False Then
             e.Handled = True
             MessageBox.Show("Numbers Only!", "Invalid Input.", MessageBoxButtons.OK, MessageBoxIcon.Warning)
@@ -119,4 +119,6 @@ Public Class MainPayrollSystem
     Private Sub refresh_Click(sender As Object, e As EventArgs) Handles refresh.Click
         loadTable()
     End Sub
+
+
 End Class
