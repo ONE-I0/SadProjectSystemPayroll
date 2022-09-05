@@ -48,6 +48,16 @@ Partial Class MainPayrollSystem
         Me.txtPosition = New System.Windows.Forms.TextBox()
         Me.Label20 = New System.Windows.Forms.Label()
         Me.GroupBox3 = New System.Windows.Forms.GroupBox()
+        Me.txtPayment = New System.Windows.Forms.TextBox()
+        Me.txtWeeklyHours = New System.Windows.Forms.TextBox()
+        Me.TextBox4 = New System.Windows.Forms.TextBox()
+        Me.TextBox3 = New System.Windows.Forms.TextBox()
+        Me.TextBox2 = New System.Windows.Forms.TextBox()
+        Me.Label23 = New System.Windows.Forms.Label()
+        Me.Label22 = New System.Windows.Forms.Label()
+        Me.Label21 = New System.Windows.Forms.Label()
+        Me.TextBox1 = New System.Windows.Forms.TextBox()
+        Me.Label7 = New System.Windows.Forms.Label()
         Me.btnCancel = New System.Windows.Forms.Button()
         Me.btnCompute = New System.Windows.Forms.Button()
         Me.Label3 = New System.Windows.Forms.Label()
@@ -79,16 +89,8 @@ Partial Class MainPayrollSystem
         Me.Label19 = New System.Windows.Forms.Label()
         Me.ToolTip1 = New System.Windows.Forms.ToolTip(Me.components)
         Me.refresh = New System.Windows.Forms.Button()
-        Me.TextBox1 = New System.Windows.Forms.TextBox()
-        Me.Label7 = New System.Windows.Forms.Label()
-        Me.Label21 = New System.Windows.Forms.Label()
-        Me.Label22 = New System.Windows.Forms.Label()
-        Me.TextBox2 = New System.Windows.Forms.TextBox()
-        Me.Label23 = New System.Windows.Forms.Label()
-        Me.TextBox3 = New System.Windows.Forms.TextBox()
-        Me.TextBox4 = New System.Windows.Forms.TextBox()
-        Me.txtWeeklyHours = New System.Windows.Forms.TextBox()
-        Me.txtPayment = New System.Windows.Forms.TextBox()
+        Me.Label24 = New System.Windows.Forms.Label()
+        Me.Label25 = New System.Windows.Forms.Label()
         Me.MenuStrip1.SuspendLayout()
         Me.GroupBox1.SuspendLayout()
         Me.GroupBox3.SuspendLayout()
@@ -128,13 +130,13 @@ Partial Class MainPayrollSystem
         'UpdateEmployeeToolStripMenuItem
         '
         Me.UpdateEmployeeToolStripMenuItem.Name = "UpdateEmployeeToolStripMenuItem"
-        Me.UpdateEmployeeToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
+        Me.UpdateEmployeeToolStripMenuItem.Size = New System.Drawing.Size(171, 22)
         Me.UpdateEmployeeToolStripMenuItem.Text = "Update Employee"
         '
         'RegisterEmployeeToolStripMenuItem
         '
         Me.RegisterEmployeeToolStripMenuItem.Name = "RegisterEmployeeToolStripMenuItem"
-        Me.RegisterEmployeeToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
+        Me.RegisterEmployeeToolStripMenuItem.Size = New System.Drawing.Size(171, 22)
         Me.RegisterEmployeeToolStripMenuItem.Text = "Register Employee"
         '
         'SettingToolStripMenuItem
@@ -166,7 +168,7 @@ Partial Class MainPayrollSystem
         Me.GroupBox1.Controls.Add(Me.Label1)
         Me.GroupBox1.Location = New System.Drawing.Point(12, 68)
         Me.GroupBox1.Name = "GroupBox1"
-        Me.GroupBox1.Size = New System.Drawing.Size(381, 337)
+        Me.GroupBox1.Size = New System.Drawing.Size(381, 390)
         Me.GroupBox1.TabIndex = 2
         Me.GroupBox1.TabStop = False
         Me.GroupBox1.Text = "Employee Information"
@@ -330,6 +332,96 @@ Partial Class MainPayrollSystem
         Me.GroupBox3.TabIndex = 4
         Me.GroupBox3.TabStop = False
         '
+        'txtPayment
+        '
+        Me.txtPayment.Enabled = False
+        Me.txtPayment.Location = New System.Drawing.Point(98, 52)
+        Me.txtPayment.Multiline = True
+        Me.txtPayment.Name = "txtPayment"
+        Me.txtPayment.Size = New System.Drawing.Size(115, 24)
+        Me.txtPayment.TabIndex = 26
+        '
+        'txtWeeklyHours
+        '
+        Me.txtWeeklyHours.Enabled = False
+        Me.txtWeeklyHours.Location = New System.Drawing.Point(98, 19)
+        Me.txtWeeklyHours.Multiline = True
+        Me.txtWeeklyHours.Name = "txtWeeklyHours"
+        Me.txtWeeklyHours.Size = New System.Drawing.Size(115, 24)
+        Me.txtWeeklyHours.TabIndex = 26
+        '
+        'TextBox4
+        '
+        Me.TextBox4.Enabled = False
+        Me.TextBox4.Location = New System.Drawing.Point(98, 151)
+        Me.TextBox4.Multiline = True
+        Me.TextBox4.Name = "TextBox4"
+        Me.TextBox4.Size = New System.Drawing.Size(115, 24)
+        Me.TextBox4.TabIndex = 25
+        '
+        'TextBox3
+        '
+        Me.TextBox3.Enabled = False
+        Me.TextBox3.Location = New System.Drawing.Point(98, 118)
+        Me.TextBox3.Multiline = True
+        Me.TextBox3.Name = "TextBox3"
+        Me.TextBox3.Size = New System.Drawing.Size(115, 24)
+        Me.TextBox3.TabIndex = 24
+        '
+        'TextBox2
+        '
+        Me.TextBox2.Enabled = False
+        Me.TextBox2.Location = New System.Drawing.Point(98, 184)
+        Me.TextBox2.Multiline = True
+        Me.TextBox2.Name = "TextBox2"
+        Me.TextBox2.Size = New System.Drawing.Size(115, 24)
+        Me.TextBox2.TabIndex = 23
+        '
+        'Label23
+        '
+        Me.Label23.AutoSize = True
+        Me.Label23.Location = New System.Drawing.Point(6, 178)
+        Me.Label23.Name = "Label23"
+        Me.Label23.Size = New System.Drawing.Size(56, 13)
+        Me.Label23.TabIndex = 22
+        Me.Label23.Text = "Net-Salary"
+        '
+        'Label22
+        '
+        Me.Label22.AutoSize = True
+        Me.Label22.Location = New System.Drawing.Point(6, 151)
+        Me.Label22.Name = "Label22"
+        Me.Label22.Size = New System.Drawing.Size(88, 13)
+        Me.Label22.TabIndex = 21
+        Me.Label22.Text = "           PhilHealth"
+        '
+        'Label21
+        '
+        Me.Label21.AutoSize = True
+        Me.Label21.Location = New System.Drawing.Point(6, 118)
+        Me.Label21.Name = "Label21"
+        Me.Label21.Size = New System.Drawing.Size(61, 13)
+        Me.Label21.TabIndex = 20
+        Me.Label21.Text = "           SSS"
+        '
+        'TextBox1
+        '
+        Me.TextBox1.Enabled = False
+        Me.TextBox1.Location = New System.Drawing.Point(98, 85)
+        Me.TextBox1.Multiline = True
+        Me.TextBox1.Name = "TextBox1"
+        Me.TextBox1.Size = New System.Drawing.Size(115, 24)
+        Me.TextBox1.TabIndex = 19
+        '
+        'Label7
+        '
+        Me.Label7.AutoSize = True
+        Me.Label7.Location = New System.Drawing.Point(6, 83)
+        Me.Label7.Name = "Label7"
+        Me.Label7.Size = New System.Drawing.Size(79, 13)
+        Me.Label7.TabIndex = 18
+        Me.Label7.Text = "Tax:    Pag-Ibig"
+        '
         'btnCancel
         '
         Me.btnCancel.Location = New System.Drawing.Point(156, 215)
@@ -368,6 +460,8 @@ Partial Class MainPayrollSystem
         '
         'GroupBox2
         '
+        Me.GroupBox2.Controls.Add(Me.Label24)
+        Me.GroupBox2.Controls.Add(Me.Label25)
         Me.GroupBox2.Controls.Add(Me.lblPosition)
         Me.GroupBox2.Controls.Add(Me.lblRate)
         Me.GroupBox2.Controls.Add(Me.lblWeeklyHours)
@@ -423,7 +517,7 @@ Partial Class MainPayrollSystem
         'lblPayment
         '
         Me.lblPayment.AutoSize = True
-        Me.lblPayment.Location = New System.Drawing.Point(104, 222)
+        Me.lblPayment.Location = New System.Drawing.Point(104, 242)
         Me.lblPayment.Name = "lblPayment"
         Me.lblPayment.Size = New System.Drawing.Size(85, 13)
         Me.lblPayment.TabIndex = 14
@@ -477,16 +571,16 @@ Partial Class MainPayrollSystem
         'Label18
         '
         Me.Label18.AutoSize = True
-        Me.Label18.Location = New System.Drawing.Point(6, 222)
+        Me.Label18.Location = New System.Drawing.Point(6, 242)
         Me.Label18.Name = "Label18"
-        Me.Label18.Size = New System.Drawing.Size(51, 13)
+        Me.Label18.Size = New System.Drawing.Size(56, 13)
         Me.Label18.TabIndex = 8
-        Me.Label18.Text = "Payment:"
+        Me.Label18.Text = "Net-Salary"
         '
         'Label17
         '
         Me.Label17.AutoSize = True
-        Me.Label17.Location = New System.Drawing.Point(6, 198)
+        Me.Label17.Location = New System.Drawing.Point(6, 176)
         Me.Label17.Name = "Label17"
         Me.Label17.Size = New System.Drawing.Size(33, 13)
         Me.Label17.TabIndex = 7
@@ -495,7 +589,7 @@ Partial Class MainPayrollSystem
         'Label16
         '
         Me.Label16.AutoSize = True
-        Me.Label16.Location = New System.Drawing.Point(6, 174)
+        Me.Label16.Location = New System.Drawing.Point(6, 198)
         Me.Label16.Name = "Label16"
         Me.Label16.Size = New System.Drawing.Size(77, 13)
         Me.Label16.TabIndex = 6
@@ -591,7 +685,7 @@ Partial Class MainPayrollSystem
         Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.DataGridView1.Location = New System.Drawing.Point(12, 464)
         Me.DataGridView1.Name = "DataGridView1"
-        Me.DataGridView1.Size = New System.Drawing.Size(806, 191)
+        Me.DataGridView1.Size = New System.Drawing.Size(808, 191)
         Me.DataGridView1.TabIndex = 19
         '
         'Label19
@@ -614,95 +708,23 @@ Partial Class MainPayrollSystem
         Me.refresh.TabIndex = 22
         Me.refresh.UseVisualStyleBackColor = True
         '
-        'TextBox1
+        'Label24
         '
-        Me.TextBox1.Enabled = False
-        Me.TextBox1.Location = New System.Drawing.Point(98, 85)
-        Me.TextBox1.Multiline = True
-        Me.TextBox1.Name = "TextBox1"
-        Me.TextBox1.Size = New System.Drawing.Size(115, 24)
-        Me.TextBox1.TabIndex = 19
+        Me.Label24.AutoSize = True
+        Me.Label24.Location = New System.Drawing.Point(104, 219)
+        Me.Label24.Name = "Label24"
+        Me.Label24.Size = New System.Drawing.Size(85, 13)
+        Me.Label24.TabIndex = 19
+        Me.Label24.Text = ".........................."
         '
-        'Label7
+        'Label25
         '
-        Me.Label7.AutoSize = True
-        Me.Label7.Location = New System.Drawing.Point(6, 83)
-        Me.Label7.Name = "Label7"
-        Me.Label7.Size = New System.Drawing.Size(79, 13)
-        Me.Label7.TabIndex = 18
-        Me.Label7.Text = "Tax:    Pag-Ibig"
-        '
-        'Label21
-        '
-        Me.Label21.AutoSize = True
-        Me.Label21.Location = New System.Drawing.Point(6, 118)
-        Me.Label21.Name = "Label21"
-        Me.Label21.Size = New System.Drawing.Size(61, 13)
-        Me.Label21.TabIndex = 20
-        Me.Label21.Text = "           SSS"
-        '
-        'Label22
-        '
-        Me.Label22.AutoSize = True
-        Me.Label22.Location = New System.Drawing.Point(6, 151)
-        Me.Label22.Name = "Label22"
-        Me.Label22.Size = New System.Drawing.Size(88, 13)
-        Me.Label22.TabIndex = 21
-        Me.Label22.Text = "           PhilHealth"
-        '
-        'TextBox2
-        '
-        Me.TextBox2.Enabled = False
-        Me.TextBox2.Location = New System.Drawing.Point(98, 184)
-        Me.TextBox2.Multiline = True
-        Me.TextBox2.Name = "TextBox2"
-        Me.TextBox2.Size = New System.Drawing.Size(115, 24)
-        Me.TextBox2.TabIndex = 23
-        '
-        'Label23
-        '
-        Me.Label23.AutoSize = True
-        Me.Label23.Location = New System.Drawing.Point(6, 178)
-        Me.Label23.Name = "Label23"
-        Me.Label23.Size = New System.Drawing.Size(62, 13)
-        Me.Label23.TabIndex = 22
-        Me.Label23.Text = "Net-Income"
-        '
-        'TextBox3
-        '
-        Me.TextBox3.Enabled = False
-        Me.TextBox3.Location = New System.Drawing.Point(98, 118)
-        Me.TextBox3.Multiline = True
-        Me.TextBox3.Name = "TextBox3"
-        Me.TextBox3.Size = New System.Drawing.Size(115, 24)
-        Me.TextBox3.TabIndex = 24
-        '
-        'TextBox4
-        '
-        Me.TextBox4.Enabled = False
-        Me.TextBox4.Location = New System.Drawing.Point(98, 151)
-        Me.TextBox4.Multiline = True
-        Me.TextBox4.Name = "TextBox4"
-        Me.TextBox4.Size = New System.Drawing.Size(115, 24)
-        Me.TextBox4.TabIndex = 25
-        '
-        'txtWeeklyHours
-        '
-        Me.txtWeeklyHours.Enabled = False
-        Me.txtWeeklyHours.Location = New System.Drawing.Point(98, 19)
-        Me.txtWeeklyHours.Multiline = True
-        Me.txtWeeklyHours.Name = "txtWeeklyHours"
-        Me.txtWeeklyHours.Size = New System.Drawing.Size(115, 24)
-        Me.txtWeeklyHours.TabIndex = 26
-        '
-        'txtPayment
-        '
-        Me.txtPayment.Enabled = False
-        Me.txtPayment.Location = New System.Drawing.Point(98, 52)
-        Me.txtPayment.Multiline = True
-        Me.txtPayment.Name = "txtPayment"
-        Me.txtPayment.Size = New System.Drawing.Size(115, 24)
-        Me.txtPayment.TabIndex = 26
+        Me.Label25.AutoSize = True
+        Me.Label25.Location = New System.Drawing.Point(6, 219)
+        Me.Label25.Name = "Label25"
+        Me.Label25.Size = New System.Drawing.Size(52, 13)
+        Me.Label25.TabIndex = 18
+        Me.Label25.Text = "Total Tax"
         '
         'MainPayrollSystem
         '
@@ -803,4 +825,6 @@ Partial Class MainPayrollSystem
     Friend WithEvents Label21 As Label
     Friend WithEvents TextBox1 As TextBox
     Friend WithEvents Label7 As Label
+    Friend WithEvents Label24 As Label
+    Friend WithEvents Label25 As Label
 End Class
