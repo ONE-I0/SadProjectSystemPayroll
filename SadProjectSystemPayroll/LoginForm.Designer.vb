@@ -24,8 +24,6 @@ Partial Class LoginForm
     Private Sub InitializeComponent()
         Me.btnLogin = New System.Windows.Forms.Button()
         Me.txtUsername = New System.Windows.Forms.TextBox()
-        Me.Label1 = New System.Windows.Forms.Label()
-        Me.Label2 = New System.Windows.Forms.Label()
         Me.txtPassword = New System.Windows.Forms.TextBox()
         Me.btnRegister = New System.Windows.Forms.Button()
         Me.Label3 = New System.Windows.Forms.Label()
@@ -33,50 +31,37 @@ Partial Class LoginForm
         '
         'btnLogin
         '
-        Me.btnLogin.Location = New System.Drawing.Point(110, 115)
+        Me.btnLogin.Location = New System.Drawing.Point(114, 122)
         Me.btnLogin.Name = "btnLogin"
-        Me.btnLogin.Size = New System.Drawing.Size(64, 20)
+        Me.btnLogin.Size = New System.Drawing.Size(112, 25)
         Me.btnLogin.TabIndex = 0
         Me.btnLogin.Text = "Login"
         Me.btnLogin.UseVisualStyleBackColor = True
         '
         'txtUsername
         '
-        Me.txtUsername.Location = New System.Drawing.Point(71, 65)
+        Me.txtUsername.BackColor = System.Drawing.SystemColors.ButtonHighlight
+        Me.txtUsername.ForeColor = System.Drawing.Color.Gray
+        Me.txtUsername.Location = New System.Drawing.Point(74, 70)
         Me.txtUsername.Name = "txtUsername"
-        Me.txtUsername.Size = New System.Drawing.Size(168, 20)
+        Me.txtUsername.Size = New System.Drawing.Size(178, 20)
         Me.txtUsername.TabIndex = 1
-        '
-        'Label1
-        '
-        Me.Label1.AutoSize = True
-        Me.Label1.Location = New System.Drawing.Point(23, 68)
-        Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(29, 13)
-        Me.Label1.TabIndex = 2
-        Me.Label1.Text = "User"
-        '
-        'Label2
-        '
-        Me.Label2.AutoSize = True
-        Me.Label2.Location = New System.Drawing.Point(23, 93)
-        Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(30, 13)
-        Me.Label2.TabIndex = 4
-        Me.Label2.Text = "Pass"
+        Me.txtUsername.Text = "Username"
         '
         'txtPassword
         '
-        Me.txtPassword.Location = New System.Drawing.Point(71, 90)
+        Me.txtPassword.ForeColor = System.Drawing.Color.Gray
+        Me.txtPassword.Location = New System.Drawing.Point(74, 96)
         Me.txtPassword.Name = "txtPassword"
-        Me.txtPassword.Size = New System.Drawing.Size(168, 20)
+        Me.txtPassword.Size = New System.Drawing.Size(178, 20)
         Me.txtPassword.TabIndex = 3
+        Me.txtPassword.Text = "Password"
         '
         'btnRegister
         '
-        Me.btnRegister.Location = New System.Drawing.Point(174, 115)
+        Me.btnRegister.Location = New System.Drawing.Point(114, 153)
         Me.btnRegister.Name = "btnRegister"
-        Me.btnRegister.Size = New System.Drawing.Size(64, 20)
+        Me.btnRegister.Size = New System.Drawing.Size(112, 25)
         Me.btnRegister.TabIndex = 5
         Me.btnRegister.Text = "Register"
         Me.btnRegister.UseVisualStyleBackColor = True
@@ -84,22 +69,21 @@ Partial Class LoginForm
         'Label3
         '
         Me.Label3.AutoSize = True
-        Me.Label3.Location = New System.Drawing.Point(10, 8)
+        Me.Label3.Font = New System.Drawing.Font("Microsoft Sans Serif", 20.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label3.Location = New System.Drawing.Point(108, 9)
         Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(229, 13)
+        Me.Label3.Size = New System.Drawing.Size(126, 31)
         Me.Label3.TabIndex = 6
-        Me.Label3.Text = "Welcome! Please login or register your account"
+        Me.Label3.Text = "Welcome"
         '
         'LoginForm
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(247, 150)
+        Me.ClientSize = New System.Drawing.Size(335, 238)
         Me.Controls.Add(Me.Label3)
         Me.Controls.Add(Me.btnRegister)
-        Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.txtPassword)
-        Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.txtUsername)
         Me.Controls.Add(Me.btnLogin)
         Me.Name = "LoginForm"
@@ -112,8 +96,6 @@ Partial Class LoginForm
 
     Friend WithEvents btnLogin As Button
     Friend WithEvents txtUsername As TextBox
-    Friend WithEvents Label1 As Label
-    Friend WithEvents Label2 As Label
     Friend WithEvents txtPassword As TextBox
     Friend WithEvents btnRegister As Button
     Friend WithEvents Label3 As Label

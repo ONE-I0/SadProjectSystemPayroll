@@ -1,4 +1,6 @@
 ﻿Imports System.Data.SqlClient
+Imports System.Windows.Forms.VisualStyles.VisualStyleElement
+
 Public Class LoginForm
     Dim dr As SqlDataReader
     Dim cmd As SqlCommand
@@ -10,6 +12,19 @@ Public Class LoginForm
         registrationAdmins.Show()
         Me.Hide()
 
+    End Sub
+
+
+    Private Sub txtUsername_MouseClick(sender As Object, e As MouseEventArgs) Handles txtUsername.MouseClick
+        txtUsername.ForeColor = Color.White
+        txtUsername.Text = ""
+        txtUsername.ForeColor = Color.Black
+    End Sub
+
+    Private Sub txtPassword_MouseClick(sender As Object, e As MouseEventArgs) Handles txtPassword.MouseClick
+        txtPassword.ForeColor = Color.White
+        txtPassword.Text = ""
+        txtPassword.ForeColor = Color.Black
     End Sub
 
 
