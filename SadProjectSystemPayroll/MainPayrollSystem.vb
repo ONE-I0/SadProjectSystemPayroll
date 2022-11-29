@@ -20,18 +20,6 @@ Public Class MainPayrollSystem
             MsgBox(ex.Message)
         End Try
     End Sub
-    Private Sub RegisterToolStripMenuItem_Click(sender As Object, e As EventArgs)
-
-        Dim empRegistration As Employee_Registration = New Employee_Registration
-        empRegistration.Show()
-
-    End Sub
-
-    Private Sub EmployeeToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles EmployeeToolStripMenuItem.Click
-        Dim empEmployeeData As Employee_Edit = New Employee_Edit
-        empEmployeeData.Show()
-
-    End Sub
 
     Private Sub MainPayrollSystem_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         loadTable()
@@ -120,5 +108,17 @@ Public Class MainPayrollSystem
         loadTable()
     End Sub
 
+    Private Sub UpdateEmployeeToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles UpdateEmployeeToolStripMenuItem.Click
 
+        Dim empEmployeeData As Employee_Edit = New Employee_Edit
+        empEmployeeData.Show()
+
+    End Sub
+
+    Private Sub RegisterEmployeeToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles RegisterEmployeeToolStripMenuItem.Click
+
+        Dim empRegistration As Employee_Registration = New Employee_Registration
+        empRegistration.Show()
+
+    End Sub
 End Class

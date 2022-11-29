@@ -64,6 +64,8 @@ Partial Class MainPayrollSystem
         Me.Label8 = New System.Windows.Forms.Label()
         Me.BackgroundWorker1 = New System.ComponentModel.BackgroundWorker()
         Me.GroupBox2 = New System.Windows.Forms.GroupBox()
+        Me.Label24 = New System.Windows.Forms.Label()
+        Me.Label25 = New System.Windows.Forms.Label()
         Me.lblPosition = New System.Windows.Forms.Label()
         Me.lblRate = New System.Windows.Forms.Label()
         Me.lblWeeklyHours = New System.Windows.Forms.Label()
@@ -89,8 +91,6 @@ Partial Class MainPayrollSystem
         Me.Label19 = New System.Windows.Forms.Label()
         Me.ToolTip1 = New System.Windows.Forms.ToolTip(Me.components)
         Me.refresh = New System.Windows.Forms.Button()
-        Me.Label24 = New System.Windows.Forms.Label()
-        Me.Label25 = New System.Windows.Forms.Label()
         Me.MenuStrip1.SuspendLayout()
         Me.GroupBox1.SuspendLayout()
         Me.GroupBox3.SuspendLayout()
@@ -130,13 +130,13 @@ Partial Class MainPayrollSystem
         'UpdateEmployeeToolStripMenuItem
         '
         Me.UpdateEmployeeToolStripMenuItem.Name = "UpdateEmployeeToolStripMenuItem"
-        Me.UpdateEmployeeToolStripMenuItem.Size = New System.Drawing.Size(171, 22)
+        Me.UpdateEmployeeToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
         Me.UpdateEmployeeToolStripMenuItem.Text = "Update Employee"
         '
         'RegisterEmployeeToolStripMenuItem
         '
         Me.RegisterEmployeeToolStripMenuItem.Name = "RegisterEmployeeToolStripMenuItem"
-        Me.RegisterEmployeeToolStripMenuItem.Size = New System.Drawing.Size(171, 22)
+        Me.RegisterEmployeeToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
         Me.RegisterEmployeeToolStripMenuItem.Text = "Register Employee"
         '
         'SettingToolStripMenuItem
@@ -294,7 +294,6 @@ Partial Class MainPayrollSystem
         '
         'txtPosition
         '
-        Me.txtPosition.Enabled = False
         Me.txtPosition.Location = New System.Drawing.Point(90, 19)
         Me.txtPosition.Multiline = True
         Me.txtPosition.Name = "txtPosition"
@@ -343,7 +342,6 @@ Partial Class MainPayrollSystem
         '
         'txtWeeklyHours
         '
-        Me.txtWeeklyHours.Enabled = False
         Me.txtWeeklyHours.Location = New System.Drawing.Point(98, 19)
         Me.txtWeeklyHours.Multiline = True
         Me.txtWeeklyHours.Name = "txtWeeklyHours"
@@ -486,6 +484,24 @@ Partial Class MainPayrollSystem
         Me.GroupBox2.TabIndex = 5
         Me.GroupBox2.TabStop = False
         Me.GroupBox2.Text = "Pay Slip"
+        '
+        'Label24
+        '
+        Me.Label24.AutoSize = True
+        Me.Label24.Location = New System.Drawing.Point(104, 219)
+        Me.Label24.Name = "Label24"
+        Me.Label24.Size = New System.Drawing.Size(85, 13)
+        Me.Label24.TabIndex = 19
+        Me.Label24.Text = ".........................."
+        '
+        'Label25
+        '
+        Me.Label25.AutoSize = True
+        Me.Label25.Location = New System.Drawing.Point(6, 219)
+        Me.Label25.Name = "Label25"
+        Me.Label25.Size = New System.Drawing.Size(52, 13)
+        Me.Label25.TabIndex = 18
+        Me.Label25.Text = "Total Tax"
         '
         'lblPosition
         '
@@ -663,7 +679,6 @@ Partial Class MainPayrollSystem
         '
         'txtRate
         '
-        Me.txtRate.Enabled = False
         Me.txtRate.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txtRate.Location = New System.Drawing.Point(90, 60)
         Me.txtRate.Multiline = True
@@ -707,24 +722,6 @@ Partial Class MainPayrollSystem
         Me.refresh.Size = New System.Drawing.Size(42, 38)
         Me.refresh.TabIndex = 22
         Me.refresh.UseVisualStyleBackColor = True
-        '
-        'Label24
-        '
-        Me.Label24.AutoSize = True
-        Me.Label24.Location = New System.Drawing.Point(104, 219)
-        Me.Label24.Name = "Label24"
-        Me.Label24.Size = New System.Drawing.Size(85, 13)
-        Me.Label24.TabIndex = 19
-        Me.Label24.Text = ".........................."
-        '
-        'Label25
-        '
-        Me.Label25.AutoSize = True
-        Me.Label25.Location = New System.Drawing.Point(6, 219)
-        Me.Label25.Name = "Label25"
-        Me.Label25.Size = New System.Drawing.Size(52, 13)
-        Me.Label25.TabIndex = 18
-        Me.Label25.Text = "Total Tax"
         '
         'MainPayrollSystem
         '
